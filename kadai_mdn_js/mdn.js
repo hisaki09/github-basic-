@@ -1,8 +1,9 @@
 const date = new Date();
-const [year,month,day] = [
-    date.getFullYear(),
-    date.getMonth(),
-    date.getDate(),
-];
+const options = {
+    year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+};
 
-console.log(date);
+const formattedDate = date.toLocaleDateString('ja-JP', options);
+console.log(formattedDate);
